@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Providers\HybridUserProvider;
 use Illuminate\Support\Facades\Gate;
@@ -27,8 +27,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        URL::forceHttps();
-
+        // URL::forceHttps();
+        
         $this->registerPolicies();
 
         // Define gates for each role
