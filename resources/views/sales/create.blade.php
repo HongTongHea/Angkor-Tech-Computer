@@ -143,7 +143,7 @@
                                     <button type="button" class="btn btn-primary btn-sm" id="submit-sale"> <i
                                             class="bi bi-check-lg"></i> Check
                                         Out</button>
-                                    @include('Sales.payment') <!-- Include payment modal -->
+                                    @include('sales.payment') <!-- Include payment modal -->
                                 </div>
                             </div>
                         </form>
