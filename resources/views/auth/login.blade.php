@@ -182,7 +182,7 @@
                         <button type="submit" class="btn btn-primary w-100 mb-2 fw-bold">Sign In</button>
 
                         <div class=" d-flex justify-content-between mb-3 ">
-                            <a href="http://localhost:8000/auth/google/redirect"
+                            <a href="https://angkor-tech-computer-production.up.railway.app/auth/google/redirect"
                                 class="btn btn-dark btn-social fw-bold"><img src="assets/img/logo-google.png"
                                     alt="" width="20" height="20">
                                 Google</a>
