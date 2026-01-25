@@ -110,8 +110,7 @@
                                 <span class="text-muted small">Created At</span>
                             </div>
                             <p class="mb-0 fw-semibold ms-1">
-                                {{ $user->created_at->setTimezone('Asia/Phnom_Penh')->format('M d, Y h:i A') }}
-                            </p>
+                                {{ $user->created_at ? $user->created_at->setTimezone('Asia/Phnom_Penh')->format('M d, Y h:i A') : 'N/A' }}
                         </div>
                     </div>
 
