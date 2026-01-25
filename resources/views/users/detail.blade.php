@@ -125,7 +125,11 @@
                                 <span class="text-muted small">Updated At</span>
                             </div>
                             <p class="mb-0 fw-semibold ms-1">
-                                {{ $user->updated_at->setTimezone('Asia/Phnom_Penh')->format('M d, Y h:i A') }}
+                                @if($user && $user->created_at)
+                                    {{ $user->created_at->setTimezone('Asia/Phnom_Penh')->format('M d, Y h:i A') }}
+                                @else
+                                    N/A
+                                @endif
                             </p>
                         </div>
                     </div>
