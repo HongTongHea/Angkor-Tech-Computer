@@ -27,8 +27,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // URL::forceHttps();
-        
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
+
         $this->registerPolicies();
 
         // Define gates for each role
@@ -48,5 +50,4 @@ class AppServiceProvider extends ServiceProvider
             return $user->isCustomer();
         });
     }
-
 }
