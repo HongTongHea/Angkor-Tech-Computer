@@ -142,7 +142,7 @@ class CheckoutOrderController extends Controller
             abort(403, 'Unauthorized access to this order.');
         }
 
-        $order->load('items');
+        $order->load('items.item');
         return view('order-confirmation', compact('order'));
     }
 
@@ -151,7 +151,7 @@ class CheckoutOrderController extends Controller
      */
     public function index()
     {
-        $onlineOrders = OnlineOrder::with(['user', 'items']) // Make sure 'items' is included
+        $onlineOrders = OnlineOrder::with(['user', 'items.item']) // Make sure 'items' is included
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
@@ -168,7 +168,7 @@ class CheckoutOrderController extends Controller
         }
 
         $orders = OnlineOrder::where('user_id', Auth::id())
-            ->withCount('items')
+            ->withCount('items.item')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
