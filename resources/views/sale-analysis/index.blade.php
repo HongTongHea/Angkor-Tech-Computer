@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Angkor Tech Computer | Top Sale Analysis')
 @section('content')
     <div class="container-fluid">
         <!-- Header Section -->

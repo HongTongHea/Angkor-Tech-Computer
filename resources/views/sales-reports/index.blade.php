@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'AngkorTech Computer | Sales Reports')
+@section('title', 'Angkor Tech Computer | Sales Reports')
 @section('content')
     <div class="container-fluid">
         <!-- Summary Cards -->

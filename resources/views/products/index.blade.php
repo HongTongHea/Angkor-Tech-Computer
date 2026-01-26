@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'AngkorTech Computer | Products List')
+@section('title', 'Angkor Tech Computer | Products List')
 @section('content')
     <div class="container-fluid mt-3">
         <div class="card shadow rounded-0">

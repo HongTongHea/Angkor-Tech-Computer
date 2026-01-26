@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'AngkorTech Computer | Dashboard')
+@section('title', 'Angkor Tech Computer | Dashboard')
 
 @section('content')
     <div class="container-fluid mt-3" data-aos="fade-down" data-aos-duration="1000">

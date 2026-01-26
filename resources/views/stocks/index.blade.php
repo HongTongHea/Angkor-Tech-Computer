@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'AngkorTech Computer | Current Stock Levels')
+@section('title', 'Angkor Tech Computer | Current Stock Levels')
 
 @section('content')
     <div class="container-fluid mt-3">
