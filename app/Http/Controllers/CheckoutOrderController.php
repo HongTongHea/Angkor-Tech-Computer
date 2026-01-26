@@ -168,7 +168,7 @@ class CheckoutOrderController extends Controller
         }
 
         $orders = OnlineOrder::where('user_id', Auth::id())
-            ->withCount('items.item')
+            ->withCount('items')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
