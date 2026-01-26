@@ -174,10 +174,10 @@
                                                                     <img src="{{ Storage::url($item->item->picture_url) }}"
                                                                         alt="{{ $item->item_name }}"
                                                                         class="rounded me-3"
-                                                                        style="width: 40px; height: 40px; object-fit: cover;">
+                                                                        style="width: 60px; height: 60px; object-fit: cover;">
                                                                 @else
                                                                     <div class="bg-secondary rounded d-flex align-items-center justify-content-center me-3"
-                                                                        style="width: 40px; height: 40px;">
+                                                                        style="width: 60px; height: 60px;">
                                                                         <i class="fas fa-box text-white"
                                                                             style="font-size: 0.8rem;"></i>
                                                                     </div>
