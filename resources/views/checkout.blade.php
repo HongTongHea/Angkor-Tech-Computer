@@ -277,7 +277,7 @@
                             id="placeOrderBtn">
                             Place Order
                         </button>
-                        <a href="{{ route('home') }}" class="btn btn-danger w-100 mt-3 btn-md fw-bold">Cancel Order</a>
+                        <a href="/" class="btn btn-danger w-100 mt-3 btn-md fw-bold">Cancel Order</a>
                     </div>
                 </div>
             </div>
