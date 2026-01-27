@@ -1,4 +1,5 @@
 @extends('website.app')
+@section('title', 'Checkout')
 @section('content')
     <style>
         .sticky-top {

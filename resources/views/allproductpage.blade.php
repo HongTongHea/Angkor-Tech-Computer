@@ -1,4 +1,5 @@
 @extends('website.app')
+@section('title', 'All Products & Accessories')
 @section('content')
     <div class="container">
         <!-- Brand Scrolling Section -->
