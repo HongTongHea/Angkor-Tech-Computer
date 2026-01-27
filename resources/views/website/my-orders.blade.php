@@ -78,7 +78,7 @@
                     {{ $orders->links() }}
                 </div>
 
-                <p class="mt-4 text-muted small text-center">
+                <p class="mt-5 text-muted small text-center">
                     Thank you for shopping with us. If you have any questions or need assistance, please don't
                     hesitate to contact us.
                 </p>
