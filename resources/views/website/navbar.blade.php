@@ -79,9 +79,9 @@
                             <li class="px-3">
                                 <div class="d-flex gap-2">
                                     @if ($user->role !== 'admin')
-                                        <a href="{{ route('profile') }}"
-                                            class="btn btn-outline-primary d-flex align-items-center">
-                                            <i class="fas fa-gear me-1"></i> Setting
+                                        <a href="{{ route('my-orders.index') }}"
+                                            class="btn btn-outline-primary d-flex align-items-center text-nowrap">
+                                            <i class="bi bi-bag-check-fill me-1"></i> My Orders
                                         </a>
                                     @endif
 
@@ -165,8 +165,8 @@
                     {{-- Role-based buttons --}}
                     <div class="mb-3 d-flex align-items-center justify-content-center">
                         @if ($user->role !== 'admin')
-                            <a href="{{ route('profile') }}" class="btn btn-outline-primary w-100 me-2">
-                                <i class="fas fa-gear me-2"></i> Setting
+                            <a href="{{ route('my-orders.index') }}" class="btn btn-outline-primary w-100 me-2">
+                                <i class="bi bi-bag-check-fill"></i> My Orders
                             </a>
                         @endif
 
