@@ -145,7 +145,7 @@ Route::middleware(['auth:admin,manager,cashier'])->group(function () {
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');;
 
 // Public checkout routes (accessible by all authenticated users)
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth:admin,manager,cashier,customer'])->group(function () {
     // Checkout Process
     Route::get('/checkout', [CheckoutOrderController::class, 'checkout'])->name('checkout');
     Route::post('/online-orders', [CheckoutOrderController::class, 'store'])->name('online-orders.store');
