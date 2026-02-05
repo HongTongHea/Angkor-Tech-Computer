@@ -386,7 +386,7 @@
                                 <div class="service-overlay">
                                     <h4>Plumbing Services</h4>
                                     <p>Professional plumbing installation and repair services</p>
-                                    <a href="" class="btn btn-outline-light"><i class="bi bi-send"></i> Contact
+                                    <a href="{{ route('contact.create') }}" class="btn btn-outline-light"><i class="bi bi-send"></i> Contact
                                         Us</a>
                                 </div>
                             </div>
@@ -402,7 +402,7 @@
                                         <div class="service-overlay">
                                             <h4>Gaming PC Setup</h4>
                                             <p>Custom gaming stations with premium peripherals</p>
-                                            <a href="" class="btn btn-outline-light"><i class="bi bi-send"></i>
+                                            <a href="{{ route('contact.create') }}" class="btn btn-outline-light"><i class="bi bi-send"></i>
                                                 Contact Us</a>
                                         </div>
                                     </div>
@@ -417,7 +417,7 @@
                                         <div class="service-overlay">
                                             <h5>Custom PC Build</h5>
                                             <p>High-performance builds</p>
-                                            <a href="" class="btn btn-outline-light"><i class="bi bi-send"></i>
+                                            <a href="{{ route('contact.create') }}" class="btn btn-outline-light"><i class="bi bi-send"></i>
                                                 Contact Us</a>
                                         </div>
                                     </div>
@@ -430,7 +430,7 @@
                                         <div class="service-overlay">
                                             <h5>RGB Gaming Rigs</h5>
                                             <p>Premium lighting setups</p>
-                                            <a href="" class="btn btn-outline-light"><i class="bi bi-send"></i>
+                                            <a href="{{ route('contact.create') }}" class="btn btn-outline-light"><i class="bi bi-send"></i>
                                                 Contact Us</a>
                                         </div>
                                     </div>
