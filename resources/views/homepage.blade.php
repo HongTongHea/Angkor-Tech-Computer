@@ -1,43 +1,102 @@
 @extends('website.app')
-@section('title', 'Angkor Tech Computer')
+@section('title', 'Angkor tech Computer| Home Page')
 @section('content')
     {{-- Hero Section --}}
+
     <section class="hero-section">
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide hero-slide" style="background-image:url('assets/img/slide (2).png')">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content container">
-                        <h1>AngkorTech Computer</h1>
-                        <p>High Performance Laptops, PCs & Accessories</p>
-                        <a href="#" class="btn btn-primary hero-btn">Shop Now</a>
+
+                <!-- Slide -->
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-inner">
+                        <div class="hero-content">
+                            <h1>Next-Gen Gaming<br>Setup</h1>
+                            <p>High performance desktop with immersive display, high speed graphics.</p>
+                            <a href="#" class="btn btn-success hero-btn">Shop Now</a>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="assets/img/slide (3).png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-inner">
+                        <div class="hero-content">
+                            <h1>Reliable Performance <br>for Office Work</h1>
+                            <p>Designed for productivity and efficiency in professional environments.</p>
+                            <a href="#" class="btn btn-success hero-btn">Shop Now</a>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="assets/img/slide (9).png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-inner">
+                        <div class="hero-content">
+                            <h1>Best Full Gaming<br>Setup</h1>
+                            <p>Complete gaming setup with all the essentials for an immersive experience.</p>
+                            <a href="#" class="btn btn-success hero-btn">Shop Now</a>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="assets/img/slide (8).png" alt="">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
-                <div class="swiper-slide hero-slide" style="background-image:url('assets/img/slide (1).png')">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content container">
-                        <h1>Gaming & Office Solutions</h1>
-                        <p>Powerful machines for work and play</p>
-                        <a href="#" class="btn btn-primary hero-btn">Explore Products</a>
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-inner">
+                        <div class="hero-content">
+                            <h1>Upgrade Your Fast<br>Typing</h1>
+                            <p>Enhance your typing speed and accuracy with our premium keyboards.</p>
+                            <a href="#" class="btn btn-success hero-btn">Shop Now</a>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="assets/img/slide (7).png" alt="">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Slide 3 -->
-                <div class="swiper-slide hero-slide" style="background-image:url('assets/img/slide (3).png')">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content container">
-                        <h1>Best Technology Deals</h1>
-                        <p>Original products with warranty</p>
-                        <a href="#" class="btn btn-primary hero-btn">View Offers</a>
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-inner">
+                        <div class="hero-content">
+                            <h1>Built for Elite Gaming<br>Experience</h1>
+                            <p>Designed for the most demanding gamers with cutting edge performance.</p>
+                            <a href="#" class="btn btn-success hero-btn">Shop Now</a>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="assets/img/slide (5).png" alt="">
+                        </div>
                     </div>
                 </div>
 
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-inner">
+                        <div class="hero-content">
+                            <h1>Best Accessories<br>for Gamers</h1>
+                            <p>Enhance your gaming experience with our top tier accessories.</p>
+                            <a href="#" class="btn btn-success hero-btn">Shop Now</a>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="assets/img/slide (4).png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other slides -->
             </div>
-
-            <!-- Controls -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
@@ -45,12 +104,11 @@
     </section>
 
     <div class="container">
-        <div class="row mb-4">
-            <div class="col text-start" data-aos="fade-right" data-aos-duration="1000">
+        <div class="row mb-4 mt-5">
+            <div class="text-start">
                 <h3 class="fw-bold">Browse by Categories</h3>
                 <p class="text-muted">Browse our wide range of categories</p>
             </div>
-
         </div>
         <div class="row" id="categories-section" data-aos="fade-up" data-aos-duration="1000">
             @foreach ($categories as $index => $category)
@@ -149,7 +207,8 @@
 
                                 <button class="btn btn-outline-primary btn-sm mt-2 w-100 add-to-cart-btn"
                                     data-id="{{ $product->id }}" data-name="{{ $product->name }}"
-                                    data-price="{{ $product->price }}" data-discount="{{ $product->discount_percentage }}"
+                                    data-price="{{ $product->price }}"
+                                    data-discount="{{ $product->discount_percentage }}"
                                     data-img="{{ asset('storage/' . $product->picture_url) }}"
                                     data-stock="{{ $product->stock_quantity }}" data-barcode="{{ $product->barcode }}"
                                     data-description="{{ $product->description }}">
@@ -169,15 +228,13 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
         <!-- ROG Banner Section -->
-        <section class="rog-banner-section ">
+        <section class="rog-banner-section mb-5" data-aos="fade-right" data-aos-duration="1000">
             <div class="container py-4">
                 <div class="row g-4">
                     <!-- Left Side (Big Banner) -->
-                    <div class="col-lg-8" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-lg-8">
                         <div class="rog-banner-wrapper h-100">
                             <div class="swiper rogBannerSwiper rog-main-banner h-100">
                                 <div class="swiper-wrapper">
@@ -201,7 +258,7 @@
                         </div>
                     </div>
                     <!-- Right Side (Products) -->
-                    <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
                         <div class="rog-products-wrapper">
                             <div class="row g-3">
                                 @foreach ($products->sortByDesc('created_at')->values() as $index => $product)
@@ -378,7 +435,7 @@
                         </div>
                     </div>
 
-                    <div class="row g-0 mt-3" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="row g-0 mt-3" data-aos="fade-right" data-aos-duration="1000">
                         <!-- Left Large Card -->
                         <div class="col-lg-6">
                             <div class="service-card left-card mb-2">
@@ -386,14 +443,14 @@
                                 <div class="service-overlay">
                                     <h4>Plumbing Services</h4>
                                     <p>Professional plumbing installation and repair services</p>
-                                    <a href="{{ route('contact.create') }}" class="btn btn-outline-light"><i class="bi bi-send"></i> Contact
-                                        Us</a>
+                                    <a href="" class="btn btn-outline-light"><i class="bi bi-send"></i>
+                                        Contact Us</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Right Side Column -->
-                        <div class="col-lg-6 ml-2" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="col-lg-6 ml-2" data-aos="fade-up" data-aos-duration="1000">
                             <!-- Top Right Card -->
                             <div class="row g-0">
                                 <div class="col-12">
@@ -402,7 +459,7 @@
                                         <div class="service-overlay">
                                             <h4>Gaming PC Setup</h4>
                                             <p>Custom gaming stations with premium peripherals</p>
-                                            <a href="{{ route('contact.create') }}" class="btn btn-outline-light"><i class="bi bi-send"></i>
+                                            <a href="" class="btn btn-outline-light"><i class="bi bi-send"></i>
                                                 Contact Us</a>
                                         </div>
                                     </div>
@@ -417,7 +474,7 @@
                                         <div class="service-overlay">
                                             <h5>Custom PC Build</h5>
                                             <p>High-performance builds</p>
-                                            <a href="{{ route('contact.create') }}" class="btn btn-outline-light"><i class="bi bi-send"></i>
+                                            <a href="" class="btn btn-outline-light"><i class="bi bi-send"></i>
                                                 Contact Us</a>
                                         </div>
                                     </div>
@@ -430,7 +487,7 @@
                                         <div class="service-overlay">
                                             <h5>RGB Gaming Rigs</h5>
                                             <p>Premium lighting setups</p>
-                                            <a href="{{ route('contact.create') }}" class="btn btn-outline-light"><i class="bi bi-send"></i>
+                                            <a href="" class="btn btn-outline-light"><i class="bi bi-send"></i>
                                                 Contact Us</a>
                                         </div>
                                     </div>
