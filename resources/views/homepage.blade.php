@@ -1,12 +1,10 @@
 @extends('website.app')
-@section('title', 'Angkor tech Computer| Home Page')
+@section('title', 'Angkor Tech Computer | Home Page')
 @section('content')
     {{-- Hero Section --}}
-
     <section class="hero-section">
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
-
                 <!-- Slide -->
                 <div class="swiper-slide hero-slide">
                     <div class="hero-inner">
