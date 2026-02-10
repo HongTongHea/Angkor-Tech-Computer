@@ -1,7 +1,5 @@
 @extends('website.app')
-
 @section('title', 'About Us')
-
 @section('content')
     <style>
         .section-title {

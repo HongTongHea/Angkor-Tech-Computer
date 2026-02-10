@@ -1,4 +1,5 @@
 @extends('website.app')
+@section('title', 'Products')
 @section('content')
     <div class="container">
         <section class="rog-banner-section mt-5">
