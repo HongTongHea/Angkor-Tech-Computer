@@ -161,7 +161,7 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="{{ asset('assets/img/IMG_6421.jpg') }}" alt="" width="70%"
+                    <img src="{{ asset('assets/img/angkortech.png') }}" alt="" width="70%"
                         class="img-company mb-4">
                     <p class="mb-4"><strong>AngkorTech Computer </strong>Shop is located in Mondol 1 Village, Svay Dangkum
                         Commune,
