@@ -58,7 +58,7 @@
                                     ? $user->picture_url
                                     : asset('storage/' . $user->picture_url) }}"
                                     alt="{{ $user->name }}" alt="{{ $user->name }}"
-                                    class="avatar-img rounded-5 me-2" width="45" height="45"
+                                    class="avatar-img rounded-5 me-2" width="40" height="40"
                                     style="object-fit: cover;">
                             @else
                                 <div class="avatar-img rounded-5 d-flex align-items-center justify-content-center bg-secondary"
