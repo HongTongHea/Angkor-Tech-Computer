@@ -381,7 +381,7 @@
             </div>
         </div>
     </div>
-    @include('Customers.create')
+    @include('customers.create')
     <!-- Include customer creation modal -->
     <style>
         .product-item:hover,
