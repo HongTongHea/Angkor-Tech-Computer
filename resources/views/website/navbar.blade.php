@@ -67,9 +67,9 @@
                                 <img src="{{ filter_var($user->picture_url, FILTER_VALIDATE_URL)
                                     ? $user->picture_url
                                     : asset('storage/' . $user->picture_url) }}"
-                                    alt="{{ $user->name }}"
-                                    class="avatar-img avatar-lg rounded-5 object-fit-cover object-center"
-                                    width="80">
+                                    alt="{{ $user->name }}" alt="{{ $user->name }}"
+                                    class="avatar-img rounded-5 me-2" width="45" height="45"
+                                    style="object-fit: cover;">
                             @else
                                 <div class="avatar-img rounded-5 d-flex align-items-center justify-content-center bg-secondary"
                                     style="width: 50px; height: 50px; color:#fff; font-size:20px; font-weight:bold;">
@@ -172,8 +172,8 @@
                             <img src="{{ filter_var($user->picture_url, FILTER_VALIDATE_URL)
                                 ? $user->picture_url
                                 : asset('storage/' . $user->picture_url) }}"
-                                alt="{{ $user->name }}"
-                                class="avatar-img avatar-lg rounded-5 object-fit-cover object-center" width="80">
+                                alt="{{ $user->name }}" class="avatar-img rounded-5 me-2" width="45"
+                                height="45" style="object-fit: cover;">
                         @else
                             <div class="avatar-img rounded-5 d-flex align-items-center justify-content-center bg-secondary"
                                 style="width: 50px; height: 50px; color:#fff; font-size:20px; font-weight:bold;">
