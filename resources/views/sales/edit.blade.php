@@ -148,7 +148,7 @@
                                     <button type="button" class="btn btn-primary btn-sm" id="submit-sale"><i
                                             class="fa-solid fa-floppy-disk me-1"></i> Update
                                     </button>
-                                    @include('Sales.payment')
+                                    @include('sales.payment')
                                     <!-- Include payment modal -->
                                 </div>
                             </div>
