@@ -142,15 +142,6 @@
                                 <span>{{ $user->name }}</span>
                         </span>
                         <div class="avatar">
-                            {{-- @if ($user->picture_url)
-                                <img src="{{ Storage::url($user->picture_url) }}" alt="Profile Picture"
-                                    class="avatar-img rounded-5 oject-fit-cover object-center" width="100%">
-                            @else
-                                <div class="avatar-img rounded-5 d-flex align-items-center justify-content-center bg-secondary"
-                                    style="width: 45px; height: 45px; color: #fff; font-size: 20px; font-weight: bold;">
-                                    {{ strtoupper(substr($user->name, 0, 1)) }}
-                                </div>
-                            @endif --}}
                             @if ($user->picture_url)
                                 <img src="{{ filter_var($user->picture_url, FILTER_VALIDATE_URL)
                                     ? $user->picture_url
@@ -159,7 +150,7 @@
                                     class="avatar-img rounded-5 oject-fit-cover object-center" width="100%">
                             @else
                                 <div class="avatar-img rounded-5 d-flex align-items-center justify-content-center bg-secondary"
-                                    style="width: 50px; height: 50px; color:#fff; font-size:20px; font-weight:bold;">
+                                    style="width: 45px; height: 45px; color:#fff; font-size:20px; font-weight:bold;">
                                     {{ strtoupper(substr($user->name, 0, 1)) }}
                                 </div>
                             @endif
