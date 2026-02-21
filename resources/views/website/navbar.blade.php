@@ -17,7 +17,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('homepage.index') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('allproductpage.index') }}">All Products</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('productpage.index') }}">Laptop</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('productpage.index') }}">Laptop & Pc</a></li>
                 {{-- <li class="nav-item"><a class="nav-link" href="{{ route('') }}">Pc</a></li> --}}
                 <li class="nav-item"><a class="nav-link" href="{{ route('aboutpage.index') }}">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact.create') }}">Contact Us</a></li>
@@ -54,16 +54,18 @@
                             id="userDropdownDesktop" data-bs-toggle="dropdown" aria-expanded="false">
                             {{-- Desktop Avatar --}}
                             @if ($user->picture_url)
-                                <img src="{{ Storage::url($user->picture_url) }}" alt="Profile Picture"
-                                    class="avatar-img rounded-5" width="40" height="40"
+                                <img src="{{ filter_var($user->picture_url, FILTER_VALIDATE_URL)
+                                    ? $user->picture_url
+                                    : asset('storage/' . $user->picture_url) }}"
+                                    alt="{{ $user->name }}" alt="{{ $user->name }}"
+                                    class="avatar-img rounded-5 me-2" width="40" height="40"
                                     style="object-fit: cover;">
                             @else
-                                <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center"
-                                    style="width: 40px; height: 40px; font-weight: bold; color: white;">
+                                <div class="avatar-img rounded-5 d-flex align-items-center justify-content-center bg-secondary"
+                                    style="width: 40px; height: 40px; color:#fff; font-size:20px; font-weight:bold;">
                                     {{ strtoupper(substr($user->name, 0, 1)) }}
                                 </div>
                             @endif
-
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="userDropdownDesktop">
                             {{-- User info at top --}}
@@ -145,14 +147,15 @@
                 @endif
                 @if ($user)
                     <div class="d-flex align-items-center mb-3">
-
                         @if ($user->picture_url)
-                            <img src="{{ Storage::url($user->picture_url) }}" alt="Profile Picture"
-                                class="avatar-img rounded-5 me-2" width="45" height="45"
-                                style="object-fit: cover;">
+                            <img src="{{ filter_var($user->picture_url, FILTER_VALIDATE_URL)
+                                ? $user->picture_url
+                                : asset('storage/' . $user->picture_url) }}"
+                                alt="{{ $user->name }}" class="avatar-img rounded-5 me-2" width="45"
+                                height="45" style="object-fit: cover;">
                         @else
-                            <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center me-2"
-                                style="width: 45px; height: 45px; font-weight: bold; color: white;">
+                            <div class="avatar-img rounded-5 d-flex align-items-center justify-content-center bg-secondary"
+                                style="width: 45; height: 45; color:#fff; font-size:20px; font-weight:bold;">
                                 {{ strtoupper(substr($user->name, 0, 1)) }}
                             </div>
                         @endif
@@ -202,7 +205,8 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('homepage.index') }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('allproductpage.index') }}">All
                             Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('productpage.index') }}">Laptop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('productpage.index') }}">Laptop & Pc</a>
+                    </li>
                     {{-- <li class="nav-item"><a class="nav-link" href="{{ route('') }}">Pc</a></li> --}}
                     <li class="nav-item"><a class="nav-link" href="{{ route('aboutpage.index') }}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('contact.create') }}">Contact Us</a>

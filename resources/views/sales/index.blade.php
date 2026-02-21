@@ -116,8 +116,8 @@
                         </tbody>
                     </table>
                     @foreach ($sales as $sale)
-                        @include('Sales.show ', ['sale' => $sale])
-                        @include('Sales.delete', ['sale' => $sale])
+                        @include('sales.show ', ['sale' => $sale])
+                        @include('sales.delete', ['sale' => $sale])
                     @endforeach
                 </div>
             </div>
