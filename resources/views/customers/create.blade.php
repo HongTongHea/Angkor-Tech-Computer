@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group col-12 col-md-12">
                             <label for="address">Address</label>
-                             <textarea name="address" class="form-control" id="address" rows="3" required placeholder="Enter address">{{ old('address') }}</textarea>
+                            <textarea name="address" class="form-control" id="address" rows="3" required placeholder="Enter address">{{ old('address') }}</textarea>
                         </div>
                     </div>
                 </div>
