@@ -68,7 +68,7 @@ class SalesReportController extends Controller
     {
         try {
             // Your logic to generate weekly report
-            $report = $this->createWeeklyReport();
+            $report = $this->salesReportService->generateWeeklyReport();
 
             return response()->json([
                 'success' => true,

@@ -63,7 +63,7 @@ class SalesReportService
                 DB::raw('COALESCE(SUM(tax_amount), 0) as total_tax'),
                 DB::raw('COALESCE(AVG(total), 0) as average_order_value'),
                 DB::raw('COUNT(DISTINCT customer_id) as unique_customers'),
-                DB::raw('COALESCE(SUM(CASE WHEN payment_status = "paid" THEN total ELSE 0 END), 0) as paid_amount'),
+                DB::raw("COALESCE(SUM(CASE WHEN payment_status = 'paid' THEN total ELSE 0 END), 0) as paid_amount"),
             ])
             ->first();
 
